@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routing Parameters</title>
+
+    <!-- Bootstrap v4.4.1 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font awesome v5.13.0 -->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+
+    <!-- Modules Angular JS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+    <!-- Main App -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routing.js"></script>
+    <script src="app/app.controller.js"></script>
+
+    <!-- Sum Module -->
+    <script src="app/modules/sum/sum.module.js"></script>
+    <script src="app/modules/sum/sum.controller.js"></script>
+
+    <!-- Sum Input Controller -->
+    <script src="app/modules/sum-input/sum-input.module.js"></script>
+    <script src="app/modules/sum-input/sum-input.controller.js"></script>
+</head>
+
+<body ng-app="AppModule">
+    <div class="row">
+        <div class="col-sm-12 card card-body">
+            header | <a href="#!/">Home</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 card card-body">
+            <ul>
+                <li>
+                    <a href="#!/sum/10/20">
+                        Sum
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/sum-input">
+                        Some Input
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 card card-body">
+            <div ng-view>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
